@@ -1,0 +1,13 @@
+{% extends "users/base.html" %}
+
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/new-query.css' %}">
+    <form class="" method="post">
+        {% csrf_token %}
+        <h1>New Query</h1>
+        <input type="text" required autofocus placeholder="Title" class="input_boxes" name="title"> <br>
+        <textarea name="content" rows="8" cols="80" class="large_box" required placeholder="Content"></textarea>
+        <input type="submit" value="Send Query" id="input_button">
+    </form>
+{% endblock  %}

@@ -1,0 +1,38 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Now mostly in a function you are going to take some argument or parameter, do some manipulation or calculation on that data and you may want to return some data to the actual program. In this case the <i>return</i> statement helps you to return some new data. For example let's create a function that takes a number as its argument and return a list of next five number after that number
+<pre class="code-area">
+def next5(num):
+	count = 0
+	next_nums = []
+	while count < 5:
+		num += 1
+		next_nums.append(num)
+		count += 1
+	return next_nums
+</pre>
+Check out what happens when we call the function
+<pre class="code-area">
+next5(1)
+
+# Result
+
+</pre>
+It did'nt returned anything since we said it to return the value but we never said to print its value. In order to print its value we would use the print function over it
+<pre class="code-area">
+print(next5(1))
+
+# Result
+[2, 3, 4, 5, 6]
+</pre>
+So it printed it out. The benefit with return statement is that you can save the data into a variable. For example from the above example we can save it into a variable like nums and then later print its value
+<pre class="code-area">
+nums = next5(1)
+print(nums)
+
+# Result
+[2, 3, 4, 5, 6]
+</pre>
+But you can also take the variable and loop over it or do anything you want. So that's a look at return statement in a Python function. Now you should move on to the next chapter
+{% endblock %}

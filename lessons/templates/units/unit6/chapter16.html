@@ -1,0 +1,79 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Once you have learned to open, read and close files. Now let's modify files. There are two ways one can overwrite a file. First way is to use the write mode and the other is by using append mode. First we will discuss about writing files. In order to write to a file use the <i>w</i> mode instead of r. Then in order to write to a file just use the <i>.write()</i> method over the file. Let's open a file called <i>hello.txt</i> and write Hello From Python Hub to the file
+<pre class="code-area">
+f = open("hello.txt", "w")
+f.write("Hello From Python Hub\n")
+f.close()
+</pre>
+It is to note that if the file does not exist, the <i>w</i> mode will create the file for you. Also if the file does exist, the <i>w</i> mode will clear out the file for writing. Now the file should be present in the current directory. You can even print its contents by using Python by opening the file in read mode and running the <i>.read()</i> function
+Note that we have put a <i>\n</i> after the Hub word, this is to make a newline. They are special characters that have certain special meaning. Here are a few more in the table
+
+<table align="center">
+    <tr>
+        <th>Special Character</th>
+        <th>Meaning</th>
+    </tr>
+    <tr>
+        <td>\n</td>
+        <td>Newline</td>
+    </tr>
+    <tr>
+        <td>\t</td>
+        <td>Horizontal Tab</td>
+    </tr>
+    <tr>
+        <td>\\</td>
+        <td>Backslash</td>
+    </tr>
+    <tr>
+        <td>\'</td>
+        <td>Single Quote</td>
+    </tr>
+    <tr>
+        <td>\"</td>
+        <td>Double Quote</td>
+    </tr>
+    <tr>
+        <td>\r</td>
+        <td>Carraige Return</td>
+    </tr>
+    <tr>
+        <td>\t</td>
+        <td>Vertical Tab</td>
+    </tr>
+    <tr>
+        <td>\f</td>
+        <td>LineFeed</td>
+    </tr>
+    <tr>
+        <td>\f</td>
+        <td>FormFeed</td>
+    </tr>
+</table>
+
+Now let's talk about appending files, you can append to a file by using the <i>a</i> mode and running the <i>.write()</i> function over the file. Let's try toopen the same file and write Hello Again to the file
+<pre class="code-area">
+f = open("hello.txt", "a")
+f.write("Hello Again")
+f.close()
+</pre>
+Now if we try to print the contents of the file we should see both the lines. Also like the <i>w</i> mode if the file does not exist it will create it but will not remove any data if the file already exists. Let's try ro print the contents of the file using the mothod we learned in the previous chapter
+<pre class="code-area">
+f = open("hello.txt", "r")
+print(f.read())
+f.close()
+
+# Result
+Hello From Python Hub
+Hello Again
+</pre>
+So as you can see that both of them wrote something to the file. Now that you have learned to write and append, in the next chapter we will look at opening complex file types in Python
+<style media="screen">
+    table tr th, td {
+        border: 1px solid rgb(0,135,215);
+        border-collapse: collapse;
+    }
+</style>
+{% endblock chapter %}

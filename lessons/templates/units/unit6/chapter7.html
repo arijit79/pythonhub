@@ -1,0 +1,34 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Somethimes you want to take an arbitary or any number of arguments. In Python, we use the * to say that a argument takes any number. It takes all the arguments given to it and stores them in a tuple. For example let's create a function that will take any number of numbers and return the sum of the numbers
+<pre class="code-area">
+def add(*args):
+	total = 0
+	for num in args:
+		total += num
+	print(total)
+
+add(1, 2, 3) 		# Calling the function
+
+# Result
+6
+</pre>
+So as you can see that it takes any number of arguments. You can also check the type of <i>args</i> by using the <i>type()</i> function <br>
+<b>Note that we have used <i>args</i> for the variable to store the arguments since its a convention but you can use anything you want</b> <br>
+Now let's talk about taking any number of keyword arguments. As you know a keyword argument is the way in which we call function by using the equal to operator for setting parameters. In order to take any number of arguments you use ** before the name of argument. It stores the data in a dictionary. Let's see an example
+<pre class="code-area">
+def printargs(**kwargs):
+	print(kwargs)
+
+printargs(name="John", age=15)
+
+# Result
+{'name': 'John', 'age': 15}
+</pre>
+<b>Note that we have used <i>kwargs</i> for the variable to store the arguments since its a convention but you can use anything you want</b> <br>
+
+<b>Note that args and kwargs should always come after any other parameter</b>
+
+So that's a look at taking arbitary number of arguments of keyword arguments. Now you should move on to the next chapter
+{% endblock %}

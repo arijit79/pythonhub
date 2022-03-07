@@ -1,0 +1,22 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<div id="login_form">
+    <link rel="stylesheet" href="{% static 'users/css/login.css' %}">
+    <h1>Login</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="email" placeholder="Email Here" class="input_boxes" autofocus="true" name="email" required><br>
+        <input type="password" placeholder="Password Here" class="input_boxes" name="password" required><br>
+        <div id="actions">
+            <label id="remember-me"><input type="checkbox" name="remember-me" checked>Remember Me</label><br>
+            <input type="submit" value="Login" id="input_button">
+        </div>
+    </form>
+    <a href="{% url 'pass-reset' %}" id="pass-reset"> Forgot Password?</a>
+    <p id="sign_up_ref"> Don't have an account? <a href="{% url 'signup' %}"> Sign Up </a> </p>
+</div>
+{% endblock %}

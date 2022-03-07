@@ -1,0 +1,39 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+<div>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'lessons/css/index.css' %}">
+    <div id="main_courses">
+        <h1>Units</h1>
+        <ol type="1">
+            {% for unit in units %}
+                 <li><a href="{% url 'chapter_index' unit.pk %}">{{ unit.title }}</a></li>
+            {% endfor %}
+        </ol>
+    </div>
+    <div id="sidebar">
+        <div id="current-challenge">
+            <h2>This Week Challenge</h2>
+            {% if challenge %}
+                <h3>{{ challenge.title }}</h3>
+                <button type="button" class="challenge-button"><a href="{% url 'challenge-answer' challenge.id %}">View</a></button>
+            {% else %}
+                <h3>No challenges this week</h3>
+            {% endif %}
+        </div>
+        {% if last_challenge %}
+            <div id="last-challenge" class="side-boxes">
+                <h2>Last Week Challenge</h2>
+                <h3>{{ last_challenge.title }}</h3>
+                    <button type="button" class="challenge-button"><a href="{% url 'last-challenge' last_challenge.id %}">View</a></button>        
+            </div>
+        {% endif %}
+        <div id="article" class="side-boxes">
+            <h2>Read The Article</h2>
+            <p>Read This week's article. Weekly articles give extra knowledge, new features and news going in the Python community</p>
+            <button type="button" class="challenge-button"><a href="{% url 'article' %}">Read</a></button>
+        </div>
+    </div>
+</div>
+{% endblock %}

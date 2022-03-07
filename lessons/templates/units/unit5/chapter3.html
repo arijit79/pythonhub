@@ -1,0 +1,68 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+So now that you have learned about relational operators and logical operators, let's see how to make some checks in Python. We use the <i>if</i> statement to make a check. For example
+<pre class="code-area">
+fruit = "Apple"
+
+if fruit == "Apple":
+	print("Yes")
+
+# Result
+Yes
+</pre>
+So as you can see that it printed Yes since the fruit variable also has the value Apple <br>
+<b>Note that Python uses indentation to determine the code to be executed just like in the above example where we indented the line that says to print Yes. Also the colon at the end of <i>if</i> line tells Python that an indented block is going to come</b><br>
+Now let's see what Python does if the check fails
+<pre class="code-area">
+fruit = "Apple"
+
+if fruit == "Apple":
+	print("Yes")
+
+# Result
+</pre>
+So Python did nothing since the check did'nt came true. But let's say that you want to do something if the rest fails as in most cases you would do. We use the else clause to tell Python what to do if the text fails
+<pre class="code-area">
+fruit = "Apple"
+
+if fruit == "Apple":
+	print("Yes")
+else:
+	print("No")
+
+# Result
+No
+</pre>
+Now let;s use some logical operators with the if statement
+<pre class="code-area">
+lang = "Python"
+type = "Iterpreted"
+
+if lang == "Python" and type == "Interpreted":
+	print("That's what you are learning")
+else:
+	print("Maybe its something different")
+
+# Result
+That's what you are learning
+</pre>
+So that's how you use the logical operators. Let's take another example with <i>or</i> and <i>not</i>
+<pre class="code-area">
+name = "John"
+
+if name == "John" or name == "Jane":
+	print("I recognize you")
+else:
+	print("Don't know")
+
+if not name == "Jane":
+	print("I think you are John")
+
+# Result
+I recognize you
+I think you are John
+</pre>
+
+So that's a look at if else statements in Python. They are really helpful in controlling the flow of the program. But you saw that we cannot put more checks in one if statement. We can do so by using the <i>elif</i> keyword which you are gonna see in the next chapter
+{% endblock %}

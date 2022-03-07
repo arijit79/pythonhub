@@ -1,0 +1,80 @@
+#main_courses {
+    background: rgb(30,30,30);
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    padding-top: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-bottom: 2%;
+    line-height: 200%;
+}
+
+#sidebar {
+    width: 25%;
+    float: right;
+    margin-top: 5.2%;
+}
+
+#current-challenge {
+    background: rgb(30,30,30);
+    padding-left: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.side-boxes {
+    background: rgb(30,30,30);
+    margin-top: 2%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+.challenge-button {
+    background: rgb(0,135,215);
+    border: none;
+    border-radius: 25px;
+    padding-bottom: 1.5%;
+    padding-top: 1.5%;
+    font-size: 110%;
+    display: inline-block;
+    width: 40%;
+    margin-left: 55%;
+}
+
+.challenge-button a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 760px) {
+    #main_courses{
+        position: static;
+        width: 94%;
+        padding-right: 0;
+    }
+    #sidebar {
+        float: left;
+        padding-left: 5%;
+        z-index: 1;
+        width: 90%;
+        padding: 0;
+    }
+    .side-boxes {
+        width: 90%;
+    }
+    #current-challenge {
+        width: 100%;
+    }
+    #article {
+        width: 100%;
+        margin-bottom: 10vh;
+    }
+}
+
+ol li a {
+    color: rgb(0,135,215);
+    text-decoration: none;
+}

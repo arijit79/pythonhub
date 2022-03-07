@@ -1,0 +1,33 @@
+{% extends "users/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'challenges/answer.css' %}">
+<div id="main">
+    <h1>Challenge: {{ challenge.title }}</h1>
+    <p>{{ challenge.content }}</p>
+    {% if answer %}
+        <h3>Your Answer</h3>
+        <pre class="code-area">
+{{ answer.content }}
+        </pre>
+    {% endif %}
+
+    {% if challenge.actual_answer %}
+        <h3>Actual Answer</h3>
+        <pre class="code-area">
+{{ challenge.actual_answer }}
+        </pre>
+    {% else %}
+            <h3>Actual Answer Coming Soon</h3>
+    {% endif %}
+    {% if answer.valid %}
+        {% if answer.valid == "C" %}
+            <h3 id="correct">Congratulations! Your Code Works. Keep it up</h3>
+        {% else %}
+            <h3 id="incorrect">Sorry! Your Code Did'nt Produced the Expected Results. Better Luck Next Time</h3>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock content %}

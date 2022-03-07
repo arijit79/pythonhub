@@ -1,0 +1,46 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Now that you have learned to create some functions. Let;s try a function that takes parameters. The benefit of parameters are that they can be passed dynamic data and they return a different result based on parameters. The declaration of parameters are done in the parantheses's of the function. The value is passed when we call the function inside the parantheses. Let's for example make a program that can take a name as parameters and print hello to the name
+<pre class="code-area">
+def sayhello(name):
+	print("Hello " + name)
+
+sayhello("John")
+
+# Result
+Hello John
+</pre>
+Let's see what happened in the above lines step by step. First we said Python that we are defining a function. Then we said that it will take some extra information when it is going to be called that is the name. In the next line, we simply said to print the hello with the name passed. When we called the function, we passed the actual. So in the most basic understanding it substitutes the value of name that is John to the variable name <br>
+Now some of you may think of the need of parameters but most of you have guessed it. Yes, dynamic data, we can call the above function as many times as possible. For example
+<pre class="code-area">
+sayhello("Micheal")
+sayhello("Kevin")
+sayhello("Billy")
+
+# Result
+Hello Micheal
+Hello Kevin
+Hello Billy
+</pre>
+
+You can actually pass multiple parameters to a single function. This can be done by seperating them by a comma. Let;s take a example by making a program to take two numbers and print their sum
+<pre class="code-area">
+def givesum(a,b):
+	print(a + b)
+
+givesum(5,3)
+
+# Result
+8
+</pre>
+So you can see that instead of taking one argument, we took two argumens and return their sum. The order of assignment is same as the order of setting of argument. Sometimes you may not want to follow the order of arguments and maybe want to set the last argument in the first place and the first one in the last place, you can explicitly say Python what value you are setting by using the equal to operator in the call with the argument and its value. For example in our above example of <i>givesum</i>, we would do something like this
+<pre class="code-area">
+givesum(b=3, a=5)
+
+# Result
+8
+</pre>
+These are called <i>keyword arguments</i> which means that they are refered by usng their function arguments
+So we reversed the order but you can put anything wherever you want
+{% endblock %}

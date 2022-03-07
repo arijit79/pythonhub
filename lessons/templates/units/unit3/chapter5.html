@@ -1,0 +1,36 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+To use Python, you need to install Python. Let's see how to install Python on different OSs
+<h3>Windows Instructions:- </h3>
+<ul>
+    <li>Go to <a href="https://www.python.org/downloads/windows/" class="link">Python Releases for Windows</a> </li>
+    <li>Download any release >= 3.6.0</li>
+    <li>Once Download is finished. Double click on the installer and click on Yes in the prompt. The installer for Python should launch. Make sure that <i>Install Pip</i> and <i>Add Python to PATH</i> is checked and then click install. Once installed click Finish.</li>
+    <li>You cna launch Python by opening the start menu and clicking on IDLE Python 3.[WHATEVER.VERSION]</li>
+</ul>
+
+<h3>Linux Instructions</h3>
+Python comes installed on most Linux  distributions including Ubuntu, Arch Linux, RHEL, Fedora but in case you want to re-install or update it or install if its not installl, you can use your package manager. Here are commands for a few distros
+<pre class="code-area">
+# Ubuntu, Debian etc
+sudo apt install python3
+</pre>
+<pre class="code-area">
+# RHEL, Fedora, CentOS etc
+sudo dnf install python3
+</pre>
+<pre class="code-area">
+# Arch Linux, Manjaro etc
+sudo pacman -S python3
+</pre>
+
+<h3>Mac OS Instructions</h3>
+<ul>
+    <li>Go to <a href="https://www.python.org/downloads/mac-osx/" class="link">Python Releases for MACOS</a> </li>
+    <li>Download any release >= 3.6.0</li>
+    <li>Once Download is finished. Double click on the installer and the installer for Python should launch. Click on install. Once installed click Finish.</li>
+    <li>You cna launch Python by opening the finder and clicking on IDLE.app</li>
+</ul>
+SO now that you have got Python installed on your system. You are ready doing some basic stuff with Python
+{% endblock chapter %}

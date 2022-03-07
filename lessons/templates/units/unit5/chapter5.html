@@ -1,0 +1,23 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+In Python as well as in the whole programming world there are sometimes things that you want to repeat or do something that would otherwise take many lines to code. For example to print numbers from 1 to 100 you would have to write a number of print statements but we can do it easily by using something called a loop. In this chapter we will discuss about a type of loop called <i>while</i> loop but there are <i>for</i> loops too which are discussed in the next chapter.
+So let's print number betwenn 1 and 5 using a while loop. A while loop takes a condition and executes its body untill its condition is true and breaks when the condition becomes true
+<pre class="code-area">
+count = 1
+
+while count <= 5:
+	print(count)
+	count += 1 		# Short for count = count + 1
+
+# Result
+1
+2
+3
+4
+5
+</pre>
+We told Python that while count is less than or equal to 5, you should print the value of count and in the last line we incremented the value of count by 1. After 5 times the value of count would be 6 making the condition false and hence stopping the loop <br>
+<b>Note that if you don't increase the value of count the loop would become an infinite loop and hence crashing the computer on which the code is executed</b> <br>
+So that's a look at while loops in Python. Sometimes we refer to loops as iteration as these terms are interchangeable. In the next chapter we will discuss about for loops in Python
+{% endblock %}

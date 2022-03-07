@@ -1,0 +1,35 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+You can assign some defaults to some function arguments so that if their value is not explicitly set, they should use their default value. This also prevents from errors. To assign a default argument to a function, the equal to operator is used after the name of the argument with the value. For example let's create a function that takes a programming language as its argument and print the type of the language
+<pre class="code-area">
+def gettype(lang="Python"):
+	langs = {
+		"Python": "Interpreted",
+		"Java": "Compiled",
+		"C": "Compiled",
+		"Ruby": "Interpreted",
+		"C++": "Compiled"
+	}
+	print(lang + " : " + langs[lang])
+</pre>
+In order to call the function with a argument, we will simply call it like any other function that accepts an argument
+<pre class="code-area">
+gettype("Java")
+
+# Result
+Java : Compiled
+</pre>
+But check out what happens when we call the function without any arguments
+
+<pre class="code-area">
+gettype()
+
+# Result
+Python : Interpreted
+</pre>
+So as you can see that it used the default value of Python <br>
+
+<b>Note default arguments should always come after arguments without any defaults otherwise it will cause an error</b> <br>
+So that's a look at default arguments in Python. In the next chapter you will learn about how to take an arbitary number of arguments and keyword arguments
+{% endblock %}

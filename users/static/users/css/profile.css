@@ -1,0 +1,143 @@
+#profile {
+    background: rgb(30,30,30);
+    width: 40%;
+    position: absolute;
+    left: 25%;
+    padding-left: 4%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    padding-right: 5%;
+}
+
+#profile #header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#profile #name {
+    font-size: 200%;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+#profile #update {
+    background: rgb(0,135,215);
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    color: rgb(255,255,255);
+    font-weight: bold;
+    height: 3em;
+    width: 25%;
+}
+
+#profile #email {
+    margin-bottom: 5%;
+}
+
+#loader {
+    display: none;
+    background-color: rgb(0,0,0);
+    position: relative;
+    margin-top: 5%;
+    left: 8%;
+    width: 85%;
+    height: 0.5em;
+}
+
+#loader #loader-bar {
+    background: linear-gradient(to right, rgb(0,135,215), rgb(255,255,255));
+    animation: expand 1s linear 1;
+    height: 0.5em;
+    border-radius: 25px;
+}
+
+@keyframes expand {
+    0% {width: 0%;}
+    100% {width: 100%;}
+}
+
+#update-profile {
+    display: none;
+}
+
+#update-profile .input_boxes {
+    background: rgb(50,50,50);
+    border: none;
+    color: rgb(200,200,200);
+    padding-bottom: 0.5%;
+    height: 2.5em;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#update-profile .input_boxes:focus {
+    border-bottom: 1px solid rgb(0,135,215);
+}
+
+#update-profile .names {
+    width: 48%;
+}
+
+#update-profile #first-name {
+    margin-right: 2%;
+}
+
+#update-profile .email {
+    width: 100%;
+}
+
+#pinfo {
+    background: rgb(50,50,50);
+    border: none;
+    color: rgb(200,200,200);
+    padding-bottom: 0.5%;
+    height: 20em;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+#update-profile #actions {
+    display: flex;
+    margin-top: 2%;
+    justify-content: flex-end;
+}
+
+#update-profile #actions #save {
+    color: rgb(255,255,255);
+    background: rgb(0,135,215);
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    font-size: 120%;
+    width: 25%;
+    height: 1.5em;
+}
+
+#update-profile #actions #cancel {
+    color: rgb(255,255,255);
+    background: rgb(255,0,0);
+    font-weight: bold;
+    border-radius: 25px;
+    border: none;
+    font-size: 120%;
+    width: 25%;
+    margin-left: 2%;
+    height: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    #profile {
+        position: static;
+        width: 90%;
+        padding-right: 5%;
+    }
+    #update-profile .names {
+        width: 100%;
+    }
+    #update-profile #actions #save,
+    #update-profile #actions #cancel {
+        width: 30%;
+    }
+}

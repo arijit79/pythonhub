@@ -1,0 +1,36 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+<b>True</b>
+A True is evaluated when a condition comes true, for example
+<pre class="code-area">
+x = "Python"
+y = "Python"
+
+print(x == y)
+
+% Result
+True
+</pre>
+So x and y are both the same strings. We have used <i>==</i> to check for equality instead of one <i>=</i> since <i>=</i> is used to assign a variable a value whereas the the <i>==</i> checks if its left and right parts are equal <br>
+
+<b>False</b>
+A False is evaluated when a condition does not come true, for example
+<pre class="code-area">
+print("Apple" == "Oranges")
+
+# Result
+False
+</pre>
+
+<b>None</b>
+A None is a special data type in Python that holds none. It has only data type i.e. None. A None is similar to null in other languages. To give a variable None data type, write
+<pre class="code-area">
+none_data_type = None
+print(none_data_type)
+
+# Result
+None
+</pre>
+Note you can assign True and False to variables just as we assigned None. True, False and None start with a capital letter rather than a small letter
+{% endblock %}

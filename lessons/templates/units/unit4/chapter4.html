@@ -1,0 +1,81 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Strings hold alphanumeric data meaning they can hold alphabets, numbers, symbols etc. To set a variable to  a string. Use this syntax
+<pre class="code-area">
+line = "Python Is Cool!"
+</pre>
+You can print the value in line in the same way as you do with other variables
+<pre class="code-area">
+print(line)
+</pre>
+This would print
+<pre class="code-area">
+Python Is Cool!
+</pre>
+Yoo can get a character from a string by the following syntax
+<pre class="code-area">
+print(line[0])
+</pre>
+This would print
+<pre class="code-area">
+P
+</pre>
+Since the first letter in P. Note that computers start counting from 0, so it acts as the first number. Similarly to get the secound letter, you can use the <i>line[1]</i>.This would print <i>y</i><br>
+A character in a string can be replaced in the same way as we define variables but instead of a variable we use the name of string and its character id.
+<pre class="code-area">
+string = "John"
+string[2] = "a"
+print(string)
+</pre>
+This would print
+<pre class="code-area">
+Joan
+</pre>
+Now let's talk about Python's string operators. There are mainly 2 string operators in Python
+<ol>
+	<li>Concaantation(+)</li>
+	<li>Multiplication(-)</li>
+</ol>
+Now let's talk about htem indevidually <br>
+<b>Concantation</b>
+<pre class="code-area">
+print("I " + "Love " + "Python")
+</pre>
+The concantation joins two strings. As we have joined above
+<pre class="code-area">
+I Love Python
+</pre>
+Note that we have added after <i>I</i> and <i>Love</i> so that they don't come joined. So let's take a look back on our line example, we can print the word <i>Py</i> by the following way
+<pre class="code-area">
+print(line[0] + line[1])
+</pre>
+This would print
+<pre class="code-area">
+Py
+</pre>
+So once you can concantate string, we should npw look at how multiplication of strings work.
+<b>Multiplication</b>
+The multiplication multiplies a string a given number of times. For example:-
+<pre class="code-area">
+multiplied_string = "Python " * 3
+print(multiplied_string)
+</pre>
+This would print the following:-
+<pre class="code-area">
+Python Python Python 
+</pre>
+So as you can see, it prints the string 3 times as we have asked Python to do so. Now you can convert to a string by using the <i>str()</i> function over an integer, float or any objevt
+<pre class="code-area">
+x = 65
+x = str(x) 		# Reassigned the value of x to be x in the string form
+print(x)
+print(type(x))  # Print its type
+
+# Result
+65
+&lt;class="str"&gt;
+</pre>
+
+So there are a few more functions to the string datatype which will be discussed later
+{% endblock %}

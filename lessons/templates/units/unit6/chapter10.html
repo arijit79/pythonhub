@@ -1,0 +1,36 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+A function has the ability to call itself in Python, this is called <i>recursion</i> it is done in the same way as you execute a function. But instead of calling it outside the function, we call inside of the function. For example
+<pre class="code-area">
+def func():
+	print("Ran")
+	func()
+
+func()
+
+# Result
+Ran
+Ran
+Ran
+...
+</pre>
+So as you can see that it printed it untill Python is out of memory. But generally you want a base case or a case that would cause the function to quit. For example to print Ran just for 5 times, we can do this
+<pre class="code-area">
+count = 1
+
+def sayRan(num):
+	print("Ran")
+	if num < 5:
+		num += 1
+		sayRan(num)
+
+# Result
+Ran
+Ran
+Ran
+Ran
+Ran
+</pre>
+So you might be thinking why we did'nt assign the value of <i>count</i> inside the function, this is because it would reset the value of count to 1 each time it runs the function. So that's all about recursion in Python. Now you should learn about variable scopes in the next chapter
+{% endblock %}

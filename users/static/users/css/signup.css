@@ -1,0 +1,94 @@
+#signup {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    padding-left: 4%;
+    padding-top: 4%;
+    padding-bottom: 2%;
+    padding-right: 4%;
+    background: rgb(30,30,30);
+}
+
+#signup h1 {
+    margin-top: 4%;
+}
+
+.input_boxes {
+    background: rgb(50,50,50);
+    color: rgb(200,200,200);
+    padding-bottom: 1%;
+    height: 2.5em;
+    width: 47%;
+    margin-bottom: 5%;
+    padding-left: 1%;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+#first-name {
+    margin-right: 2%;
+}
+
+.input_boxes:focus {
+    border-bottom: 1px solid rgb(0,135,215);
+}
+
+#input_button {
+    background: rgb(0,135,215);
+    border: none;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    font-size: 110%;
+    color: rgb(255,255,255);
+    left: 37%;
+    position: relative;
+    border-radius: 25px;
+}
+
+.large_box{
+    background: rgb(50,50,50);
+    color: rgb(200,200,200);
+    padding-bottom: 1%;
+    width: 98%;
+    height: 2.5em;
+    margin-bottom: 5%;
+    padding-left: 1%;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.large_box:focus {
+    border-bottom: 1px solid rgb(0, 135, 215);
+}
+
+#sign_in_ref {
+    padding-top: 2%;
+    font-size: 75%;
+    color: rgb(150,150,150);
+}
+
+#sign_in_ref a {
+    color: rgb(0,135,215);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 760px) {
+    #signup {
+        position: static;
+        width: 90%;
+        padding-left: 4%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+    }
+    .input_boxes {
+        width: 98%;
+    }
+    .large_box {
+        width: 98%;
+    }
+}

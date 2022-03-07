@@ -1,0 +1,14 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Till now we have just read, wrote, appended to plain text files only but say you want to open a picture in Python, obviously you cannot see the image in the console but want the raw, the bytes form of the image. Well this is what you will be learning about in this chapter. In order to open a file like image or song, you need to open it in bytes form. The is done by putting a <i>b</i> after the mode in which to open the file. Let's for example open a image file called <i>image.jpg</i> in read bytes mode
+<pre class="code-area">
+i = open("image.jpg", "rb")
+print(i.read())
+
+# Result
+xff\xd8\xff\xe0\x00\x10JFIF\x00\x01\x01\x01\x00\x00\x00\x00\x00\x00\xff\xe1\x00BExif\x00\x00MM\ ....
+</pre>
+Now if you have checked the result yourself by taking any random image, you might also see a huge output like the above. We have only should the first line of the output that has came <br>
+You can also change <i>r</i> to <i>w</i> for writing and <i>a</i> for appending bytes
+{% endblock chapter %}

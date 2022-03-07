@@ -1,0 +1,21 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Now that you have learned what a computer has in terms of hardware as well as how does a computer handles memory. Now its time to have a look at what makes up a computer in terms of software. A computer has a operating system (shortened as OS), which is installed in it. It provides an interface for user interaction and handles where and how data should be read write as well as a list of programs that do certain task. Computer follows the following procedure for doing an operation said by the user
+<center>
+    <b>Command :- </b><br>
+    User --> Software/Program --> Operating System --> Shell --> Kernal --> Shell --> Hardware <br>
+    <b>Response :- </b><br>
+    User <-- Software/Program <-- Operating System <-- Shell <-- Kernal <-- Shell <-- Hardware
+</center> <br>
+Now let's have a look at what each of them does at a more depth
+<ul>
+    <li>The Software takes the input from the user and gives specific functions to the operating system to be done</li>
+    <li>The operating system takes the functions and pass it to the shell</li>
+    <li>The shell then passes the data to the kernal</li>
+    <li>The kernal then allocates memory and pass a message to the next shell about what to be executed by the hardware</li>
+    <li>The shell takes the commands and passes it to the hardware</li>
+    <li>The processor executes the specified commands</li>
+</ul> <br>
+Now you may ask why we don't have just the software and the kernal as the others just pass some information? The reason for so many things such as operating system, shells is that software and opearting system cannot directly talk with the kernal and the kernal cannot directly talk with the hardware. The graphical interface that you get is the OS. Also the software cannot directly talk with the kernal. Mostly these bits and pieces come in a single file but they are devided in this order. Now there are different types of kernals, shells and operating system, which we will have a look at the next chapter
+{% endblock chapter %}

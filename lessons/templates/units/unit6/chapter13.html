@@ -1,0 +1,29 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+You can create anonymous functions is Python. They are one liner functions with no special facilities as compared to normal functions. We use the <i>lambda</i> keyword to define a anonymous functions. Let's make a simple lambda function to print this is a lambda function
+<pre class="code-area">
+func = lambda: print("This is a lambda function")
+func()
+
+# Result
+This is a lambda function
+</pre>
+So we assigned a <i>func</i> a lambda function. We write the keyword lambda, followed by a colon and the statement that we want to execute. But generally functions take a argument, you can also take arguments in lambda functions by putting it before hte colon. Let's make a function that takes a integer argument and add 5 to it
+<pre class="code-area">
+func = lambda a: print(a + 5)
+func(5)
+
+# Result
+10
+</pre>
+Okay it did as expected. Now let's take more then one argument. We will make a program to take two arguments and multiply them together and print its result
+<pre class="code-area">
+multiply = lambda a, b: print(a*b)
+multiply(5, 6)
+
+# Result
+30
+</pre>
+You don't see a whole lot of lambda functions but it is good to know since they are very useful when you want a function with just one or a few lines
+{% endblock chapter %}

@@ -1,0 +1,99 @@
+#login_form {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 25%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    background: rgb(30,30,30);
+}
+
+#login_form  h1 {
+    margin-top: 2%;
+}
+
+#actions {
+    display: flex;
+    margin-bottom: 1%;
+}
+
+#pass-reset {
+    color: rgb(0,135,215);
+    text-decoration: none;
+    font-size: 75%;
+    margin-top: 5%;
+}
+
+.input_boxes {
+    background: rgb(50,50,50);
+    color: rgb(200,200,200);
+    padding-bottom: 2%;
+    height: 2em;
+    width: 98%;
+    margin-bottom: 5%;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.input_boxes:focus {
+    border-bottom: 1px solid rgb(0,135,215);
+}
+
+#input_button {
+    background: rgb(0,135,215);
+    border: none;
+    font-weight: bold;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+    font-size: 110%;
+    color: rgb(255,255,255);
+    position: relative;
+    left: 40%;
+    border-radius: 25px;
+}
+
+#sign_up_ref {
+    padding-top: 2%;
+    font-size: 75%;
+    color: rgb(150,150,150)
+}
+
+#sign_up_ref a {
+    color: rgb(0,135,215);
+    text-decoration: none;
+}
+
+#remember-me {
+    font-size: 75%;
+}
+#remember-me input[type=checkbox] {
+    -moz-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    -webkit-transform: scale(0.75);
+    -o-transform: scale(0.75);
+}
+
+@media screen and (max-width: 760px) {
+    #login_form {
+        position: static;
+        width: 90%;
+    }
+    .input_boxes {
+        width: 100%;
+    }
+    #actions {
+        flex-direction: column;
+    }
+    #input_button {
+        width: 30%;
+        position: relative;
+        left: 35%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+}

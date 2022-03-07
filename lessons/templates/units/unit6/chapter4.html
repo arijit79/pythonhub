@@ -1,0 +1,42 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+You have seen a lot of functions but let's try to create one by ourselves. We use the def keyword to make a function, followed by the name of the function and a pair of parantheses. In our example, let's make a funtion to say hello
+<pre class="code-area">
+def sayhello():
+	print("Hello World")
+</pre>
+So that just defined a function for us. In order to call the function as we have sern before, we write the name of the function followed by open and close parantheses
+<pre class="code-area">
+sayhello()
+
+# Result
+Hello World
+</pre>
+So that just called the function. You can call it as many times as possible
+<pre class="code-area">
+sayhello()
+sayhello()
+sayhello()
+sayhello()
+
+# Result
+Hello World
+Hello World
+Hello World
+Hello World
+</pre>
+You can of course automate this by using a loop as shown
+<pre class="code-area">
+count = 0
+while count <= 3:
+	sayhello()
+
+# Result
+Hello World
+Hello World
+Hello World
+Hello World
+</pre>
+So now you might be thinking what those parantheses do, they hold parameters for the function. You will learn about that in the next lesson
+{% endblock %}

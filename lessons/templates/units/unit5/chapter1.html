@@ -1,0 +1,40 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Now that you have learned about the data types of Python., now you should have a look at its relational operators. A relational operator takes two objects, compares between them and returns a True or False depending on what the result is. Let's have a look at its relational operators:-
+<ol>
+	<li>Equal to (==): Checks for Equality if the objects given on left and right are equal. Note that we have used two equal signs instead of one because two equal signs checks for equality while one equal sign assigns a variable a value</li>
+	<li>Greater than (>): Checks if left hand object is greater than the right hand object </li>
+	<li>Less than (<): Checks if left hand object is less than the right hand object </li>
+	<li>Greater than or equal to (>=): Checks if left hand object is greater than or equal to the right hand object </li>
+	<li>Less than or equal to (<=): Checks if left hand object is less than or equal to the right hand object </li>
+	<li>Not equal to (!=): Checks if objects given on left and right are not equal </li>
+	<li>Identical to (is): Checks if objects on lefft hand and right hand are identical, meaning they have both the same memory address or both of them are the same objects </li>
+</ol>
+Now let's have some practical examples of these operators
+<pre class="code-area">
+x = 4
+y = 5
+
+print(x == y) 		# Checks if x is equal to y
+print(x != y) 		# Checks if x and y are not equal
+print(x < y) 		# Checks if x less then y
+print(x is y) 		# Checks if x and y are same objects
+
+# Results
+False
+True
+True
+False
+</pre>
+As you can see x is not identical to y since they are not the dsmr objects is memory. So let's make them identical
+
+<pre class="code-area">
+y = x 				 # Assign the value of y to x with same memory address
+print(x is y)
+
+# Result
+True
+</pre>
+So that's a look at Python's relational operators. Now you dhould move on to the next chapter
+{% endblock %}

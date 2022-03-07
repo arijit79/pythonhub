@@ -1,0 +1,102 @@
+{% extends "users/base.html" %}
+
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'users/css/intro.css' %}">
+    <div id="showcase" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/showcase.jpg" %}'); background-attachment: fixed;">
+        <div id="texts">
+            <div id="main-text">
+                Start Your Journey At Python Hub to <br> Mastering Python
+            </div>
+            <div id="small-text">
+                <b>We welcome all users to Python Hub.</b> <br> Python is one of the simplest language to learn but you can create some powerful porgrams with it which can not only make your life easier but also to the entire world. You can start learning now for free.
+            </div>
+        </div>
+        <div id="buttons">
+            <button type="button" id="learn"><a href="{% url 'index' %}">Start Learning</a></button>
+            <button type="button" id="signup"><a href="{% url 'signup' %}">Sign Up</a></button>
+        </div>
+    </div>
+    <div id="info">
+        <h1>Why Python?</h1>
+        <div class="boxes">
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/ml.jpg" %}')">
+                <h3>Machine Learning & Artificial Intelligence</h3>
+                <p>Machine learning and artificial intelligence are taking over the world. It is used everywhere, your digital personal assistant, your email, your favourite movie site etc. Python is the first choice for this purpose, thanks to all the powerful libraries available.</p>
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/www.jpg" %}')">
+                <h3>Web Development</h3>
+                <p>Python powrs some of the biggest websites of the World Wide Web with its powerful and customizable web frameworks. Its easy to learn syntax makes getting into web development very easy. You can actually make really powerful websites just within a few months of time</p>
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/robot.jpg" %}')">
+                <h3>Robotics</h3>
+                <p>Python is loved in the field of robotics since so many robotic tools can integrate with Python making robotics much easire. It is also used for image detection, speech recognition, converting text into voice output and integration with a lot of services which can be used in robotics</p>
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/stats.jpg" %}')">
+                <h3>Numeric & Statistical Calculations</h3>
+                <p>Python is the first choice by people involved in numeric and statistical computing for the availability of the huge array of tools for fast numeric and statistical computation of data. It also has libraries for visualization in tons of graph types </p>
+            </article>
+        </div>
+        <h1>Why Python Hub?</h1>
+        <div class="boxes">
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/free.jpg" %}')">
+                <h3>Free of Charge</h3>
+                Python Hub is completely free of cost or charge. We don't ask for any money at any point of your learning. Neither we pospond your learning for not paying us. This service is free and will always be free of cost at whatever cost
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/education.jpg" %}')">
+                <h3>High Quality Education</h3>
+                <p>We teach you from the very basics of computers, software development, programming and finally get into Python. All chapters are open and you can read whatever you want without any restriction. We try to clear every single concept of programming and Python is a great detail</p>
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/question.jpg" %}')">
+                <h3>Ask Queries</h3>
+                <p>Our experts are always raedy to help you out whenever you are in a doubt either while learning or at any point while programming. The query section is open to you just login and ask. That's it and your doubt should get cleared </p>
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/other.jpg" %}')">
+                <h3>Other Stuff</h3>
+                <p>We always have fun going on like weekly articles and weekly challenges. Challanges help you learn better by practicing interesting problems while articles keep you up-to date with news from the Python and the entire programming world</p>
+            </article>
+        </div>
+        <h1>How to Make Best Use of Python Hub</h1>
+        <div class="boxes">
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/learn.jpg" %}')">
+                <h3>Learn</h3>
+                Python is actually very simple and developed as a beginner language. Get the basic concepts of each topic and try to understand each example given. If you don't understand with examples, ask it in the queries and our experts should help you clear them because there is no bad in asking
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/practice.jpg" %}')">
+                <h3>Practice Yourself</h3>
+                Try practicing the examples by yourself, because practicing yourself will teach you how things work and give you the practical use of the progrqam. Try changing the code and tinkering with it to learn even more. If you change your code and gives some error you don't understand, give it up in the query section
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/challenges.jpg" %}')">
+                <h3>Take Challanges</h3>
+                Taking challenges is the best way to learn practical use of Python as well as in programming as well as a whole. They tell how much you have grasped each concept as well as teach you writing better code. Maybe you have left something, challenges are the best as remind about what you have left as well as what you did'nt understand
+            </article>
+            <article class="box-item" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('{% static "users/images/projects.jpg" %}')">
+                <h3>Make Projects</h3>
+                It dosen't matter how much you remember attributes and methods as the main thing that is required is login. Making projects will take an overall test of your learning power as well as how much you can make logic for the program. The best thing is the final result will really satisfy you and maybe solve an issue that is in your real-life
+            </article>
+        </div>
+    </div>
+    <footer>
+        <div id="footer-links">
+            <ul>
+                <spam>Python Hub</spam>
+                <li><a href="{% url 'index' %}">Lessons</a> </li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'query-index' %}">Login</a> </li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">Login</a> </li>
+                    <li><a href="{% url 'signup' %}">Sign Up</a> </li>
+                {% endif %}
+                <li><a href="{% url 'about' %}">About Us</a> </li>
+                <li><a href="#showcase">^ Go to Top</a> </li>
+            </ul>
+            <ul id="social">
+                <spam>Social</spam>
+                <li><a href="https://www.facebook.com/Python-Hub-116222359822898/" target="_blank">Facebook</a></li>
+                <li><a href="https://twitter.com/HubPython" target="_blank">Twitter</a></li>
+                <li><a href="mailto:pythonhubmail@gmail.com" target="_top">Mail Us</a></li>
+            </ul>
+        </div>
+        <div id="copy">Copyright &copy; 2019. The Python Hub Team</div>
+    </footer>
+{% endblock content %}

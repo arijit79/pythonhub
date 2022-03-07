@@ -1,0 +1,115 @@
+.text-center-large{
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    text-decoration: bold;
+    font-size: 250%;
+    color: rgb(100,100,100);
+}
+
+#greeter {
+    padding-left: 5%;
+    background: rgb(45,45,45);
+    height: 2em;
+    font-weight: bold;
+    line-height: 175%;
+    margin-top: 1%;
+}
+
+button {
+    float: right;
+    background: rgb(0,135,215);
+    border: none;
+    font-size: 120%;
+    border-radius: 25px;
+    height: inherit;
+    margin-right: 5%;
+}
+
+#greeter button a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.query {
+    margin-top: 1%;
+    background: rgb(45,45,45);
+    line-height: 250%;
+    height: 3em;
+    padding-left: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.query .query-info {
+    font-size: 125%;
+}
+
+.unanswered {
+    font-size: 75%;
+    color: rgb(255,0,0)
+}
+
+.answered {
+    font-size: 75%;
+    color: rgb(0,135,215)
+}
+
+.query .query-buttons {
+    display: flex;
+    width: 40%;
+    margin-top: 0.75%;
+}
+
+.query-list-button {
+    margin-right: 2%;
+    color: rgb(255,255,255);
+    width: 30%;
+    height: 1.7em;
+}
+
+.query-list-delete-button {
+    margin-right: 2%;
+    background: rgb(230,0,0);
+    color: rgb(255,255,255);
+    width: 30%;
+    height: 1.7em;
+}
+
+.query-list-delete-button a,
+.query-list-button a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(255,255,255);
+    font-size: 80%;
+}
+
+@media screen and (max-width: 760px) {
+    #greeter {
+        width: 94%;
+        padding-right: 0%;
+    }
+    #greeter button {
+        float: right;
+        margin-right: 3%;
+    }
+    .text-center-large{
+        top: 40%;
+        margin-left: -13%;
+    }
+    .query {
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 1%;
+    }
+    .query .query-buttons {
+        width: 100%;
+    }
+    .query-list-button, .query-list-delete-button {
+        width: 100%;
+    }
+    .query-list-button a, .query-list-delete-button a{
+        font-size: 60%;
+    }
+}

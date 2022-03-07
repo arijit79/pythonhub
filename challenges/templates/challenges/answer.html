@@ -1,0 +1,53 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static "challenges/answer.css" %}">
+<div id="main">
+    <h1>Challenge: {{ challenge.title }}</h1>
+    <p>{{ challenge.content }}</p>
+    {% if user.is_authenticated %}
+        {% if answer %}
+            <h2>Your Answer</h2>
+            <pre class="code-area">
+    {{answer.content}}
+            </pre>
+            {% else %}
+                <button type="button" onclick="showAnswerBox()" class="challenge-button" id="answer">Answer</button> <br>
+                <form method="post">
+                    {% csrf_token %}
+                    <textarea name="answer"id="answerfield" placeholder="Put Code Here" required></textarea>
+                    <div id="actions">
+                        <input type="submit" class="challenge-button" id="submit" value="Submit">
+                        <button type="button" class="challenge-button" id="cancel"><a href="{% url 'index' %}">Cancel</a> </button>
+                    </div>
+                </form>
+        {% endif %}
+
+    {% else %}
+        <button type="button" class="challenge-button" id="login"><a href="{% url 'login' %}">Login to Answer</a> </button>
+    {% endif %}
+</div>
+<script type="text/javascript">
+    function showAnswerBox() {
+        document.getElementById('answer').style.display = "none";
+        document.getElementById('answerfield').style.display = "block";
+        document.getElementById('submit').style.display = "inline-block";
+        document.getElementById('cancel').style.display = "inline-block";
+    }
+    document.getElementById('answerfield').addEventListener('keydown',function(e) {
+        if(e.keyCode === 9) {
+            var start = this.selectionStart;
+            var end = this.selectionEnd;
+            var target = e.target;
+            var value = target.value;
+            target.value = value.substring(0, start)
+                        + "\t"
+                        + value.substring(end);
+            this.selectionStart = this.selectionEnd = start + 1;
+            e.preventDefault();
+        }
+    },false);
+</script>
+{% endblock content %}

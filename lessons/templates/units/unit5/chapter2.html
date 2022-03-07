@@ -1,0 +1,22 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Logical operators allow you to join two or mrre conditions together. There are three Logical operators in Python
+<ol>
+    <li><b>and:-</b> Returns True only when all the conditions are True and returns False if anyone of the condition is False</li>
+    <li><b>or:-</b> Returns True if any of the conditions is True, False if all the conditions are False</li>
+    <li><b>not:-</b> Returns True if the given condition is False and vice versa</li>
+</ol>
+Let's see a practical example of the above operators
+<pre class="code-area">
+print(1 == 1 and 1 < 2)
+print(1 > 2 or 1 < 2)
+print(not 1 == 1)
+
+# Results
+True
+True
+False
+</pre>
+So that's a look at Python's logical operators, if you have come from other languages you may be used to && for and, || for or and !! for not but in Python we use the keywords instead. This increases readablity of code and makes it easier to understand. In the next chapter we will learn to use if statements that actually control the flow of program instead of just printing True and False
+{% endblock chapter %}

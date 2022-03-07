@@ -1,0 +1,121 @@
+#content-block {
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    font-size: 150%;
+    line-height: 150%;
+}
+
+#content-block p {
+    margin-top: 0;
+}
+
+#content-block button {
+    background: rgb(0, 135, 215);
+    border-radius: 25px;
+    border: none;
+    color: rgb(255,255,255);
+    font-size: 150%;
+    line-height: 100%;
+    font-weight: bold;
+    padding: 0 3% 0 3%;
+}
+
+#content-block .code-area {
+    line-height: 150%;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    background: rgb(40,40,40);
+    font-style: italic;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    overflow-x: auto;
+}
+
+#referal {
+    box-shadow: 0 -5px 10px rgb(10,10,10);
+    position: sticky;
+    bottom: 0;
+    padding-top: 1.5%;
+    margin-top: 2%;
+    padding-bottom: 0.5%;
+    background: rgb(30,30,30);
+}
+
+#referal #close {
+    margin-top: -4.5%;
+    padding-right: 1%;
+    padding-left: 1%;
+    float: right;
+    color: rgb(255,0,0);
+    font-weight: bold;
+    cursor: default;
+    background: inherit;
+    border-radius: 50%;
+}
+
+#referal #close:hover {
+    background: rgb(255,0,0);
+    color: rgb(255,255,255);
+}
+
+#referal p {
+    font-size: 80%;
+    margin-top: -1%;
+}
+
+footer {
+    background: rgb(30,30,30);
+    margin-bottom: -2%;
+    color: rgb(150,150,150);
+}
+
+footer spam {
+    font-weight: bold;
+}
+
+footer ul li {
+    list-style-type: disc;
+}
+
+footer ul li a {
+    color: rgb(150,150,150);
+    text-decoration: none;
+    line-height: 150%;
+}
+
+footer ul li a:hover {
+    color: rgb(0,135,215);
+}
+
+#copy {
+    text-align: center;
+}
+
+.link {
+    color: rgb(0,135,215);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 760px) {
+    #content-block h1 {
+        line-height: 120%;
+        margin-bottom: -15%;
+        width: 95%;
+    }
+    #content-block {
+        width: 95%;
+    }
+    #content-block .code-area {
+        width: 100%;
+    }
+    #referal {
+        display: none;
+    }
+    #referal p {
+        display: none;
+    }
+    #referal #close {
+        display: none;
+    }
+}

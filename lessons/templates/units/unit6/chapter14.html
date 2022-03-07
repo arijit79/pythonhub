@@ -1,0 +1,61 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+The <i>map()</i> function is an important function to know when working with functions and lists. The <i>map()</i> function takes a function and a list/set/tuple as its argument and takes each element of the list to make it the argument of the given function. This would be more clear when we will discuss the example. For example let's make a function that takes a list of numbers and adds them together
+<pre class="code-area">
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+def square(num):
+    sq = num ** 2
+    return sq
+
+results = map(square, nums)
+for r in results:
+    print(r)
+
+# Result
+1
+4
+9
+16
+25
+36
+49
+64
+81
+100
+</pre>
+The <i>map()</i> function returns a iterable on which we can iterate over to get the returned values, we did that using the for loop. It printed the square of the numbers as expected. But there are two things that you can make shorter. First is the list of numbers and secound is the function. We can use list comprehensions to generate the list and we can use a lambda expression to make such a small function
+
+<pre class="code-area">
+nums = [num for num in range(11)]
+square = lambda num: num ** 2
+
+results = map(square, nums)
+for r in results:
+    print(r)
+</pre>
+The <i>map()</i> function can also take multiple iterables, for example, let's instead of one list make two list and add each of their elements
+<pre class="code-area">
+nums1 = [num for num in range(10)]
+nums2 = [num for num in range(100, 90, -1)]
+add = lambda num1, num2: num1 + num2
+
+results = map(add, nums1, nums2)
+for r in results:
+    print(r)
+
+
+# Result
+100
+100
+100
+100
+100
+100
+100
+100
+100
+100
+</pre>
+So that's a look at the <i>map()</i> function, which can be used to do some anazing things. For now you should move on to the next chapter
+{% endblock chapter %}

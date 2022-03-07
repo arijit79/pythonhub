@@ -1,0 +1,71 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+So now that you have done some input and output, let's talk about variables. First of all what is a variable, a variable is a location in the memory (RAM) where some data is stored. As we have already discussed defining variables is very easy in Python
+<pre class="code-area">
+var = input()
+</pre>
+So that takes some input and stores them in the memory. Variables are case-sensitive. VAR and var are two different variables. You cannot use anything as a variable There are some rules for definign variables.
+<ul>
+    <li>First character can only be a alphabet or a underscore (_)</li>
+    <li>After the first letter you can use numbers, alphabets and underscores</li>
+    <li>Variables cannot have spaces between them</li>
+</ul>
+
+Note you cannot use certain as variables (or may be use it but it is discouraged). Like
+<ul>
+    <li>pass</li>
+    <li>is</li>
+    <li>return</li>
+    <li>async</li>
+    <li>await</li>
+    <li>global</li>
+    <li>False</li>
+    <li>True</li>
+    <li>None</li>
+    <li>and</li>
+    <li>as</li>
+    <li>import</li>
+    <li>if</li>
+    <li>else</li>
+    <li>elif</li>
+    <li>for</li>
+    <li>while</li>
+    <li>asset</li>
+    <li>break</li>
+    <li>try</li>
+    <li>except</li>
+    <li>finally</li>
+    <li>yield</li>
+    <li>del</li>
+    <li>def</li>
+    <li>from</li>
+    <li>continue</li>
+    <li>class</li>
+    <li>in</li>
+    <li>raise</li>
+    <li>lambda</li>
+    <li>nonlocal</li>
+    <li>not</li>
+    <li>or</li>
+</ul>
+Note that you may be able to define some of them but it is discouraged to use them, you can put an underscore or a number in after of them to avoid any problems <br>
+So say that you defined a variable but want to delete it from memory. You can do so by using the <i>del</i> keyword. Let's see an example
+<pre class="code-area">
+x = 5
+print(x)
+</pre>
+This would print the following
+<pre class="code-area">
+5
+</pre>
+Now let's use the <i>del</i> keyword
+<pre class="code-area">
+del x
+</pre>
+This would print the following
+<pre class="code-area">
+NameError: name 'x' is not defined
+</pre>
+That gave us an error of NameError and said that it does not know anything about x. So taht is how we delete defined variables
+{% endblock chapter %}

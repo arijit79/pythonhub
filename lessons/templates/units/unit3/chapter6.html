@@ -1,0 +1,37 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+{% load static %}
+<img src="{% static 'lessons/images/idle.png' %}" align="right" height="50%" width="50%">
+So now that you have opened IDLE, you can start doing some basic input and output. Before we start, Python is a case-sensitive programming language, ABC is not equal to abc. Both are different. Also the IDLE is an interactive place for testing, when we actually start writing complex code, we would probably use a file to write code Also some keywords such as print, input, pass etc are reserved. So if you use them, it would probably throw an exception. So let's print a simple Hello World on the screen. You can use the <i>print()</i> function to print something on the screen.
+<pre class="code-area">
+print("Hello World")
+</pre>
+This would cause the following result
+<pre class="code-area">
+Hello World
+</pre>
+The quotes in the command do not matter, you can use both singlw as well as double quotes
+<br>
+Now that you have give some output, let's take some input. In order to take some input, you need to define a variable, to where the input got is stored. In our example we will create a variable called <i>var</i>. The <i>input()</i> function is used to get input. So the syntax is:-
+<pre class="code-area">
+var = input("Enter something: ")
+</pre>
+<pre class="code-area">
+Enter something: Hi
+</pre>
+Note that we put some text in the input function, this text is displayed to the user. Also we have put space after the colon(:). This is so to differentiate between the prompt and the user input. The result is a Enter comething prompt, we put <i>Hi</i> there and press Enter and the program closes. Let's create a program that takes some user input and displays it back to them.
+
+<pre class="code-area">
+text = input("Enter a line of text: ")
+print("You typed the following:")
+print(text)
+</pre>
+<pre class="code-area">
+Enter a line of text: Python is cool!
+You typed the following:
+Python is cool!
+</pre>
+
+So it did what we expected, took a line of text and printed it out. Note that when we did <i>print(text)</i>, we did not put quotes, this is because we want to display the data stored in the variable text that had been defined when we took the input. If we had put the quotes, Python would print the word text. Now you should move on to the next chapter where we disscussing more about variables.
+{% endblock chapter %}

@@ -1,0 +1,20 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+You can have an else case in your for loop just like an if statement which gets executed when the condition is false. The else clause in a for loop is executed when the loop breaks due to a break statement. For example
+<pre class="code-area">
+for i in range(5):
+    if i == 4:
+        break
+    print(i)
+else:
+    print("Stopped at 4")
+
+# Result
+1
+2
+3
+Stopped at 4
+</pre>
+So that's a look at else statement in a for loop. That is your final chapter in this unit. Now you should move to the next unit
+{% endblock chapter %}

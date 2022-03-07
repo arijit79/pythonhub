@@ -1,0 +1,23 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'lessons/css/chapter.css' %}">
+<p class="text-center-large">Weekly articles are not available right now. Please try after few days</p>
+<style>
+	.text-center-large{
+    position: absolute;
+	top: 40%;
+	margin-left: 20%;
+	margin-right: 20%;
+    text-decoration: bold;
+    font-size: 250%;
+    color: rgb(100,100,100);
+}
+@media screen and (max-width: 750px) {
+	.text-center-large {
+		position: static;
+	}
+}
+</style>
+{% endblock content %}

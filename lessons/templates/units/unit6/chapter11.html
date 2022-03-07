@@ -1,0 +1,16 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+A function can be reassigned to another variable. This is done in the same way as you do with other data types except it is passed without any argument, for example
+<pre class="code-area">
+def add_num(a, b):
+    print(a + b)
+
+an = add_num
+an(2, 5)
+
+# Result
+7
+</pre>
+So as you can see that we assigned the name of a function to something else. This is going to be helpful as move to the future lessons
+{% endblock %}

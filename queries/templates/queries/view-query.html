@@ -1,0 +1,16 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/query-view.css' %}">
+    <div class="container">
+        <h1 id="title"> {{query.title}} </h1>
+        <p id="content">{{query.content}}</p>
+        <p class="ans-dec"> Answer:- </b>
+        {% if query.answer %}
+            <p id="answer"> {{query.answer}} </p>
+        {% else %}
+            <h3 id="unans">The query has not been answered</h3>
+        {% endif %}
+    </div>
+{% endblock %}

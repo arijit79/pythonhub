@@ -1,0 +1,21 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+{% load static %}
+Now let's have a look at the diffreent types of operating systems, shells and kernals that are out there
+<ul>
+    <img src="{% static 'lessons/images/windows.png' %}" heiht="50%" width="50%" align="right">
+    <li><b>Microsoft Windows:- </b> This is the most popular operating system available out there in the market. It is developed by a proprietary company, Microsoft. It is popular because of its ease of use and since people are experienced with it the most. It comes with a NT Kernal developed by Microsoft. It has mainly two shells, the Command Prompt and PowerShell</li> <br> <br> <br>
+
+    <img src="{% static 'lessons/images/ubuntu.png' %}" heiht="50%" width="50%" align="right">
+    <li><b>Linux:- </b> It is an open-source Kernal developed by a Finnish develper Linux Torvolds and the Linux community. Linux comes in distributions or distros that are developed by other developers. They take the kernal, change it a bit to suit their distro, install other open-source software and publish it. This distribution is now a the GNU/Linux since most open-source software are published under the GNU License. Some examples of distros are Ubuntu, Fedora, Arch Linux, Red Hat Enterprise Linux, CentOS, Debian etc. Linux is a very secure OS and least prone to any hacks or viruses. That us why it is used in most sincere places such as Research Centers, Defence and it is also used in servers of most companies such as Google, Facebook etc. Linux has a lot of shells like bash, zsh, fish, sh, tsh, csh etc</li> <br>
+
+    <img src="{% static 'lessons/images/mac-os.png' %}" heiht="50%" width="50%" align="right">
+    <li><b>Mac OS:- </b>It is also a proprietary operating system developed by Apple to be run on Apple devices. It uses the bash shell. It uses the UNIX kernal developed in AT&T back in the day. The unfortunate fact is that you can't use it on any hardware, you specifically have to use Apple hardware</li> <br> <br> <br> <br> <br>
+
+    <img src="{% static 'lessons/images/freebsd.jpg' %}" heiht="50%" width="50%" align="right">
+    <li><b>BSDs:-</b> They are a group of operating systems which were developed in the Bell Labs. It uses the UNIX kernal, and uses bash as its default shell. They are also very secure to viruses and hacks making them good for server use. They have a lot of versions such as FreeBSD, OpenBSD, GhostBSD etc.</li> <br> <br> <br>
+</ul>
+
+So that's a look at different OSs and their kernals and their default shells. Now you should learn about different types of software in a computer.
+{% endblock %}

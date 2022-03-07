@@ -1,0 +1,10 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+It is a difficult to manage opening and closing of files that is why we have context managers for rescue. A context manager starts with a <i>with</i> keyword and executes a function followed by a <i>as</i> keyword and a variable in which to store the file. Let's use a context manager to open a file that contains Hello World and print it out
+<pre class="code-area">
+with open("hello.txt", "r") as f:
+    print(f.read())
+</pre>
+We started with the <i>with</i> keyword and then we said to set a variable f to that file, in the following statement we just printed it out. Note that we did'nt closed the file since it is done automatically by the context manager. They are very powerful since they can be used to open other things such as databases, SMTP etc
+{% endblock chapter %}

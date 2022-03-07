@@ -1,0 +1,83 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Now let's talk about decorators, it is one of the most complex things to digest in Python but if you understand its concept it is super easy. Before we dive into decorators, we should discuss what a <b>First-Class</b> function is. Well a first class function basically takes a function as its argument and return the same function from an inner function that it holds. Let's first see it from step by step and then we will use decorators
+<pre class="code-area">
+def outside_function(function):
+    func = function
+    def inner_function():
+        return func()
+    return inner_function
+</pre>
+So right above we have a function called <i>outside_function</i> which takes a function as its argument, then we are re-assignig the function that we got to <i>func</i>. Also inside the <i>outside_function</i> function, we have an inner function called <i>inner_function</i> that pretty musch executes the <i>func</i> function. In the last line of the <i>outside_function</i> function, we said to return the <i>inner_function</i> <br>
+Let's build a function for the above function to take as argument
+<pre class="code-area">
+def sayhello():
+    print("Hello World")
+</pre>
+So let's call the above function
+<pre class="code-area">
+x = outside_function(sayhello)
+x()
+</pre>
+So we said to execute <i>outside_function</i> function and we got <i>inner_function</i> as a return to variable <i>x</i>. Finally we said to execute <i>x</i> that we\ould cause <i>inner_function</i> to execute. Now let's strip the code down from the <i>outside_function</i>. First of all we don't need to reassign the function with func, also we can directly call function from <i>inner_function</i>. Let's do this
+<pre class="code-area">
+def outside_function(function):
+    def inner_function():
+        return function()
+    return inner_function
+</pre>
+Now let's recall the above function with the same syntax as above
+<pre class="code-area">
+x = outside_function(sayhello)
+x()
+
+# Result
+Hello World
+</pre>
+But that is a whole lot of typing. So what we can do is we can decorate our <i>outside_function</i> on our <i>sayhello</i> function by using the @ operator. In order to do so we just add the decoration over the sayhello function. Let's take a look
+<pre class="code-area">
+@outside_function
+def sayhello():
+    print("Hello World")
+</pre>
+That's it. Now instead of saying in the above way, we can simply call it like this
+<pre class="code-area">
+syahello()
+
+# Result
+Hello World
+</pre>
+Let's put all of the code together since its broken into many parts
+<pre class="code-area">
+def outside_function(function):
+    def inner_function():
+        return function()
+    return inner_function
+
+@outside_function
+def sayhello():
+    print("Hello World")
+
+sayhello()
+</pre>
+You may be asking what is the benefit of using decorators, well its pretty simple, just say you want to add some print statement, we can put it in one single place that is in the <i>inner_function</i> function and that will show effect in all function that use your function
+<pre class="code-area">
+def outside_function(function):
+    def inner_function():
+        print("This statement got run")
+        return function()
+    return inner_function
+
+@outside_function
+def sayhello():
+    print("Hello World")
+
+sayhello()
+
+# Result
+This statement got run
+Hello World
+</pre>
+So that's all about decorators and their use, in the next chapter we will discuss about decorators with arguments
+{% endblock %}

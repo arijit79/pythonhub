@@ -1,0 +1,42 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <div id="greeter">
+        Have a query? Ask it here
+        <button type="button" name="button">
+            <a href="{% url 'query-new' %}">New Query</a>
+        </button>
+    </div>
+    <br>
+    {% if queries %}
+        {% for query in queries %}
+            <div class="query">
+                <section class="query-info">
+                    {{query.title}}
+                    {% if query.answer %}
+                        <spam class="answered">(︽ answered)<spam>
+                    {% else %}
+                        <spam class="unanswered">(⤬ unanswered)<spam>
+                    {% endif %}
+                </section>
+                <section class="query-buttons">
+                    <button type="button" class="query-list-button">
+                        <a href="{% url 'query-view' query.id %}">View Query</a>
+                    </button>
+                    <button type="button" class="query-list-button">
+                        <a href="{% url 'query-update' query.id %}">Update Query</a>
+                    </button>
+                    <button type="button" class="query-list-delete-button">
+                        <a href="{% url 'query-delete' query.id %}">Delete Query</a>
+                    </button>
+                </section>
+            </div>
+        {% endfor %}
+        {% else %}
+            <div class="text-center-large">
+                You don't have any queries
+            </div>
+    {% endif %}
+{% endblock %}

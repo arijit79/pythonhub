@@ -1,0 +1,73 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+A string has many functions associated with it. A function is a code that is defined but not executed untill it is called. To execute it you have to call the function over that object. We will learn to create functions later on but for now let's learn how to call a function over a string
+<pre class="code-area">
+s = "python is cool"
+s.[FUNCTION ASSOCIATED](ARGUMENTS) 	# Syntax for calling a function on a string
+</pre>
+We assigned <i>s</i> to a string. In the secound line, we said Python to get the <i>s</i> variable and run a function that it has built-in by using a dot or a period seperator and then a pair of parantheses within which arguments go if required. The following are the functions built-in to a string in Python
+<ul>
+	<li>capitalize(): Capitalize the first letter of the string</li>
+	<li>casefold(): Return a version of the string suitable for caseless comparisons</li>
+	<li>center(): Return a centered string of length width</li>
+	<li>count(): Counts how many times a a character or a string occurs in the called string</li>
+	<li>encode(): Encodes a string to bytes</li>
+	<li>endswith(): Check if the called string ends with the given character</li>
+	<li>expandtabs(): Return a copy where all tab characters are expanded using spaces</li>
+	<li>find(): Finds the given string in the called string
+	<li>format(): Return a formatted version of S, using substitutions from args and kwargs. The substitutions are identified by braces ('{' and '}')</li>
+	<li>format(): Return a formatted version of S, using substitutions from mappings. The substitutions are identified by braces ('{' and '}')</li>
+	<li>index(): Returns the position of a character or group of character in the called string</li>
+	<li>lower(): Converts all letters to lower case</li>
+	<li>replace(): Return a copy with all occurrences of substring old replaced by new</li>
+	<li>startswith(): Check if the called string starts with given chracter</li>
+	<li>split(): Split the called string on the given character and return a list</li>
+	<li>upper(): Converts all letters to upper case</li>
+</ul>
+So there are a lot functions that can be called over a string. You can run the <i>dir()</i> function to see all the functions that can be called over a string. It returns a list containing all its attributes (discussed later) and functions. Please note that items with two underscores are private functions and attributes and should not be called
+<pre class="code-area">
+s = ""
+print(dir(s))
+
+# Result
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__',
+'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
+'__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__',
+'__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__',
+'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__',
+'__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize',
+'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',
+'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal',
+'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace',
+'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans',
+'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit',
+'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title',
+'translate', 'upper', 'zfill']
+</pre>
+One problem that Pythoners face is how to format a string which have numbers in many places. One way is by converting the integer/float to a string using the <i>str()</i> function and then concantating it. But if you have more than a few numbers it gets really tedious. That is why we have string formatting. Let's make for example a discription line for a imaginary person John who is 25 years old, earns $1000 a month, owns 2 cars, has 1 child of 3 years. Now the steps differ from Python 3.6 and above and Python 3.5 and lower. So first let's look for Python 3.5 and lower
+<pre class="code-area">
+age = 25
+salery = 1000
+cars = 2
+child = 1
+child_age = 3
+print("John is {} years old and earns ${}. He has {} cars and has {} child who is of {} years".format(age, salery, cars, child, child_age))
+
+# Result
+John is 25 years old and earns $1000. He has 2 cars and one has 1 child who is of 3 years
+</pre>
+So we used the <i>.format()</i> function over the string and it filled the {} in the order of arguments given to the function. Now let's see the above for Python 3.6 and above, the above is also valid in Python 3.6 and above but it is easier to use something called f-strings which have a f at the starting of the string and instead of curly braces they hold the name of the variable from which the data shoudl be recieved
+<pre class="code-area">
+age = 25
+salery = 1000
+cars = 2
+child = 1
+child_age = 3
+print(f"John is {age} years old and earns ${salery}. He has {cars} cars and has {child} child who is of {child_age} years")
+
+# Result
+John is 25 years old and earns $1000. He has 2 cars and one has 1 child who is of 3 years
+</pre>
+So it did the same thing. Please note that the Python 3.5 syntax is valid in Python 3.6 but it is invalid in vice versa
+{% endblock %}

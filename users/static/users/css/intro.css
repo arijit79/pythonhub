@@ -1,0 +1,157 @@
+#showcase {
+    width: 100%;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#texts {
+    display: flex;
+    flex-direction: column;
+}
+
+#main-text {
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#small-text {
+    margin-top: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#buttons {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+}
+
+#learn {
+    margin-right: 2%;
+    background: rgb(0,135,215);
+    border-radius: 25px;
+    border: none;
+    width: 20%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+#learn a {
+    color: rgb(255,255,255);
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#signup {
+    margin-right: 2%;
+    background: rgb(255,255,215);
+    border-radius: 25px;
+    border: none;
+    width: 13%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+
+#learn:hover, #learn a:hover {
+    background: rgb(0,95,175);
+}
+
+#signup:hover, #signup a:hover {
+    background: rgb(235,235,235);
+}
+
+#signup a {
+    color: rgb(20,20,20);
+    font-size: 120%;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#info h1, #info h2 {
+    text-align: center;
+}
+
+#info .boxes {
+    display: flex;
+}
+
+#info .box-item {
+    text-align: center;
+    width: 25%;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-right: solid rgb(30,30,30);
+}
+
+footer {
+    background: rgb(30,30,30);
+    margin-bottom: -2%;
+    color: rgb(150,150,150);
+}
+
+footer #footer-links {
+    display: flex;
+}
+
+footer ul {
+    width: 15%;
+}
+
+footer spam {
+    font-size: 120%;
+    font-weight: bold;
+}
+
+footer ul li a {
+    color: rgb(150,150,150);
+    text-decoration: none;
+    line-height: 150%;
+}
+
+footer ul li a:hover {
+    color: rgb(0,135,215);
+}
+
+#copy {
+    text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+    #texts {
+        position: static;
+    }
+    #buttons {
+        position: static;
+        margin-top: 2%;
+        align-items: center;
+        flex-direction: column;
+    }
+    #learn, #signup {
+        width: 50%;
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    #signup {
+        margin-top: 2%;
+    }
+    #info .boxes {
+        flex-direction: column;
+    }
+    #info .box-item {
+        width: 98%;
+        border-right: none;
+        border-bottom: solid rgb(30,30,30);
+    }
+    footer #footer-links {
+        flex-direction: column;
+        width: 50%;
+    }
+    footer ul {
+        width: 100%;
+    }
+}

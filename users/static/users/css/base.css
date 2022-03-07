@@ -1,0 +1,200 @@
+*::selection {
+    background: rgba(0,135,215,0.8);
+    color: rgb(255,255,255);
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background: rgb(0,0,0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(100,100,100,0.7);
+}
+
+::-webkit-scrollbar-corner {
+    background: #000;
+}
+
+body {
+    padding: 0%;
+    margin: 0%;
+    background: rgb(20,20,20);
+    color: rgb(250,250,250);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+nav {
+    margin: 0 auto 0 0;
+    position: sticky;
+    top: 0%;
+    background: rgb(30,30,30);
+    height: 10vh;
+    z-index: 1;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    padding: 0;
+    box-shadow: 0 5px 5px rgb(20,20,20);
+}
+
+#navbar-menu a:last-child {
+    margin-top: auto;
+}
+
+#navbar-menu a {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar-menu a svg {
+    height: 30px;
+    width: 30px;
+    color: rgb(0,135,215);
+    transform: translate(0%, 50%);
+}
+
+#navbar-menu a #login {
+    height: 40px;
+    width: 40px;
+}
+
+nav #img-logo {
+    width: 10vw;
+}
+
+#navbar-menu a:hover, #navbar-menu a.active {
+    border-bottom: 2px solid rgb(0,135,215);
+    color: rgb(255,255,255);
+}
+
+#navbar-menu a:hover > svg, #navbar-menu a.active svg {
+    color: rgb(255,255,255);
+}
+
+#navbar-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0,135,215);
+    font-size: 95%;
+    text-transform: uppercase;
+    height: 10vh;
+}
+
+#navbar-menu li {
+    display: none;
+}
+
+nav #logo, nav #logo2 {
+    font-weight: bold;
+    font-size: 200%;
+    line-height: 200%;
+    width: 8%;
+    text-align: center;
+}
+
+nav #logo {
+    color: rgb(0,135,215);
+}
+
+#navbar-menu {
+    text-align: center;
+    padding: 0;
+    margin: 0 0 auto auto;
+    display: flex;
+    width: 5%;
+    position: fixed;
+    background: rgb(35,35,35);
+    z-index: 1;
+    height: 90vh;
+    flex-direction: column;
+    list-style-type: none;
+    line-height: 400%;
+    transition: width 0.5s;
+}
+
+#navbar-menu:hover {
+    width: 25%;
+}
+#navbar-menu:hover a li {
+    display: block;
+    margin-left: 1%;
+}
+
+.main {
+    margin-left: 5%;
+}
+
+.success, .error, .info {
+    color: rgb(255,230,255);
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+    width: 50%;
+    z-index: 2;
+    transform: translate(50%, 0);
+    text-align: center;
+    font-size: 110%;
+}
+
+.success {
+    background: rgb(0,135,215);
+}
+
+.error {
+    background: rgb(200,0,0);
+}
+
+.info {
+    background: rgb(0,120,120);
+}
+
+@media screen and (max-width: 760px) {
+    nav {
+        display: flex;
+        margin: 0;
+    }
+    nav #img-logo {
+        transform: translate(0, 15%);
+        height: 50px;
+        width: 75px;
+    }
+    nav #logo, nav #logo2 {
+        width: auto;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
+
+    #navbar-menu {
+        width: 100%;
+        flex-direction: row;
+        position: fixed;
+        bottom: 0;
+        height: 10vh;
+    }
+    #navbar-menu a {
+        width: 20%;
+    }
+    #navbar-menu:hover a li {
+        display: none;
+        margin-left: 0;
+    }
+    #navbar-menu:hover {
+        width: 100%;
+    }
+
+    .success, .info, .error {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 1%;
+    }
+    .main {
+        margin-left: 0;
+        margin-bottom: 10vh;
+    }
+}

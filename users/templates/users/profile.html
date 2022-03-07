@@ -1,0 +1,46 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'users/css/profile.css' %}">
+<div id="profile">
+    <section id="header">
+        <section id="name"> {{user.first_name}} {{user.last_name}}</section>
+        <button type="button" id="update" name="button" onclick="show_update()">Update Details</button>
+    </section>
+    <section id="email">{{user.email}}</section>
+    <section style="font-weight: bold; margin-bottom: 4%;">
+        {{user.userdetail.personal_info}}
+    </section>
+    <div id="loader"><div id="loader-bar"></div></div>
+    <div id="update-profile">
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="first-name" placeholder="First Name Here" class="input_boxes names" id="first-name" value="{{user.first_name}}" required>
+            <input type="text" name="last-name" placeholder="Last Name Here" class="input_boxes names" value="{{user.last_name}}" required>
+            <input type="email" name="email" placeholder="Email Here" required class="input_boxes email" value="{{user.email}}">
+            <textarea name="pinfo" id="pinfo" placeholder="Enter Your Personal Here">{{user.userdetail.personal_info}}</textarea>
+            <div id="actions">
+                <input type="submit" value="Update" id="save">
+                <button type="button" name="button" id="cancel" onclick="hide_update()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    function show_update(){
+        document.getElementById("loader").style.display = "block"
+        setTimeout(function(){
+            document.getElementById("loader").style.display = "none"
+            var element = document.getElementById("update-profile");
+            element.style.display = "block";
+            document.getElementById("update").style.display = "none"
+}, 1000);
+    }
+    function hide_update(){
+        var element = document.getElementById("update-profile");
+        element.style.display = "none";
+        document.getElementById("update").style.display = "inline-block"
+    }
+</script>
+{% endblock content %}

@@ -1,0 +1,29 @@
+{% extends 'base_chapter.html' %}
+
+{% block chapter %}
+Python has many builtin data types. Here is a list of all the data types that are builtin to Python with their short discription
+
+<ol>
+	<li><b>int:-</b> It holds an intger value without having any decimal places</li>
+	<li><b>float:-</b> Holds a floating point decimal value</li>
+	<li><b>str:-</b> Holds any string or alphanumeric data </li>
+	<li><b>list:-</b> Holds a list of many values into one memory location. Similar to a C or C++ array </li>
+	<li><b>set:-</b> Holds a list of many values without any duplicates</li>
+	<li><b>tuple:-</b>Holds an immutable list of values </li>
+	<li><b>dict:-</b> Called a dictionary, holds a key value pair of data</li>
+	<li><b>True:-</b> A True value, evaluated when a condition is true</li>
+	<li><b>False:-</b> A False value, evaluated when a condition is false</li>
+	<li><b>None:-</b> A None value, similar to null in other languages. Note it is not equal to a 0 since the 0 has a data type of int as well as value, while None is just a data type</li>
+</ol>
+These are the builtin data types in Python, you can create a simple data type for yourself just by creating a class and initializing an object for it. <br>
+To get the data type of a variable simpily use the <i>type()</i> function over it
+<pre class="code-area">
+x = 3.14
+print(type(x))
+
+# Result
+&lt;class 'float'&gt;
+</pre>
+Note we will be discussing class and objects in upcoming units.
+So that's a look at the builtin data types in Python. Now we will have a detailed look at each of them in upcoming chapters
+{% endblock %}

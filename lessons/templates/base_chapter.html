@@ -1,0 +1,61 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'lessons/css/chapter.css' %}">
+    <div id="content-block">
+        <h1>
+            {{ content.title }}
+        </h1>
+        <p style="white-space: pre-line">
+            {% block chapter %}{% endblock chapter %}
+        </p>
+        <a href="{% url 'chapter' unit_no next_chapter %}">
+          <button type="submit" id="next">Next</button> </a>
+          <div id="referal">
+          {% if user.is_authenticated %}
+                <p>Got a Query? <a href="{% url 'query-new' %}" class="link">Ask Query</a> </p>
+          {% else %}
+                <p>Got a Query? <a href="{% url 'signup' %}" class="link">Sign Up</a> Now to Get it Cleared</p>
+          {% endif %}
+          <button id="close">
+              ⤬
+          </button>
+      </div>
+    </div>
+    <footer>
+        <ul>
+            <spam>Python Hub</spam>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'query-index' %}">Queries</a> </li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a> </li>
+                <li><a href="{% url 'signup' %}">Sign Up</a> </li>
+            {% endif %}
+            <li><a href="{% url 'about' %}">About Us</a> </li>
+            <li><a href="#content-block">^ Go to Top</a> </li>
+        </ul>
+        <div id="copy">Copyright &copy; 2019. The Python Hub Team</div>
+    </footer>
+    <script type="text/javascript">
+        if (window.screen.width <= 768) {
+            document.getElementById('close').parentNode.style.display = 'none';
+            document.getElementById("next").style.margin = "0 0 2% 0";
+            sessionStorage.setItem("referal", false);
+        }
+        
+        if (sessionStorage.getItem("referal") != "false") {
+            document.getElementById('close').parentNode.style.display = 'block';
+        } else {
+            document.getElementById('close').parentNode.style.display = 'none';
+            document.getElementById("next").style.margin = "0 0 2% 0";
+        }
+
+        document.getElementById('close').addEventListener('click', function(e) {
+            e.preventDefault();
+            this.parentNode.style.display = 'none';
+            document.getElementById("next").style.margin = "0 0 2% 0";
+            sessionStorage.setItem("referal", false);
+        }, false);
+    </script>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "users/base.html" %}
+
+{% block content %}
+{% load static %}
+    <link href="{% static 'users/css/about.css' %}" rel="stylesheet" type="text/css">
+    <h1 id="about-h1">About Us</h1>
+    <div id="para1">
+        Python Hub is a free service to teach you one of the most famous programming language in the
+        world, Python. We take you from the very basics from working of computer to an expert level programmer whithin a few months. We teach you interactively chapter wise from how computer work to complex functions. We cover loops, logics and a deatiled working of everything we cover. Plus we give challanges and quizes to check you learning, understanding and grasping level. Got queries while learning, ask our experts about your doubts and it should be just cleared.
+    </div>
+    <div id="para2">
+        We are a free service and show ads to cover up our development costs. This is the only possible way to keep this service going without making it paid.
+    </div>
+    <h2 id="social-h2">Our Social Links</h2>
+    <div id="social">
+    	<div id="facebook"><a href="https://www.facebook.com/Python-Hub-116222359822898/" target="_blank">F</a></div>
+        <div id="tweet">
+            <a href="https://twitter.com/HubPython" target="_blank">T</a>
+        </div>
+    	<div id="mail"><a href="mailto:pythonhubmail@gmail.com" target="_top">M</a> </div>
+    </div>
+    <footer>
+        <ul>
+            <spam>Python Hub</spam>
+            <li><a href="{% url 'index' %}">Lessons</a> </li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'query-index' %}">Login</a> </li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a> </li>
+                <li><a href="{% url 'signup' %}">Sign Up</a> </li>
+            {% endif %}
+            <li><a href="{% url 'about' %}">About Us</a> </li>
+            <li><a href="#about-h1">^ Go to Top</a> </li>
+        </ul>
+        <div id="copy">Copyright &copy; 2019. The Python Hub Team</div>
+    </footer>
+{% endblock %}

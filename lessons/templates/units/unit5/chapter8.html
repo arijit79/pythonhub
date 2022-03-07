@@ -1,0 +1,68 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+So now that you know about the range function, now let's see how you can use a list with a for loop. A list's items can be looped over or iterated over to get each item seperately. So let's take an example
+<pre class="code-area">
+langs = ["Python", "Java", "C", "C++", "Ruby"]
+
+for lang in langs:
+	print(lang)
+
+# Result
+Python
+Java
+C
+C++
+Ruby
+</pre>
+So as you can see that it printed all items one by one. You can instead of printing that, do some checks or other operations on that element. You can use a different variable instead of the variable <i>lang</i> but due to conventions we write the variable as the singular form of the list variable. You can perform the same slicing on the lists. You can also use sets and tuples to be iterated over <br>
+A dictionary can also be looped over to get its data. To get just the keys, we use this syntax
+<pre class="code-area">
+letterPosition = {
+	"A": 1,
+	"B": 2,
+	"C": 3,
+	"D": 4,
+	"E": 5,
+}
+
+for letter in letterPosition:
+	print(letter)
+
+# Result
+A
+B
+C
+D
+E
+</pre>
+But that did'nt printed the values since they get discarded. One way to get them is by using the <i>zip</i> function and passing two the dictionary as well as the dictionary's <i>values</i> function
+<pre class="code-area">
+for letter, position in zip(letterPosition, letterPosition.values()):
+	print(letter + " : " + position)
+
+# Result
+A : 1
+B : 2
+C : 3
+D : 4
+E : 5
+</pre>
+The <i>zip()</i> function takes an arbitary number of list/set/tuples/dict etc and joins tem together. Here the leterPosition returns a list of keys and <i>letterPosition.values()</i> returns a list of its values <br>
+Now let's talk about string, a string is treated just like a list in by a for loop, for example
+<pre class="code-area">
+s = "Python"
+
+for letter in s:
+	print(letter)
+
+# Result
+P
+y
+t
+h
+o
+n
+</pre>
+So that's a look at for loops with lists, dicts and strings in Python. Now you should learn about lists comprehensions
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+An integer holds any positive, negative or a zero. To assign an integer ro a variable  in Python. You can use this syntax
+<pre class="code-area">
+x = 1
+y = 0
+z = -1
+</pre>
+The first line sets the value of <i>x</i> to be 1. In the secound line we set the value of <i>y</i> to be 0 and in the third line, we set the value of another variable <i>z</i> to be -1.
+Similarly you can define other variables. You can convert a sring to an integer by using the <i>int()</i> function
+<pre class="code-area">
+x = "10"
+print(type(x))
+
+x = int(x) 		# Reassigned x from string to integer
+print(type(x))
+
+# Result
+&lt;class="str"&gt;
+&lt;class="int"&gt;
+</pre>
+<br>
+Floats hold any number with a floating decimal pont. To set a variable to a float, you can use
+<pre class="code-area">
+x = 3.14
+</pre>
+So now, we have defined the value of x to be 3.14. In order to print the value of <i>x</i>, you can use the <i>print()</i> function
+<pre class="code-area">
+print(x)
+</pre>
+This would print the following
+<pre class="code-area">
+3.14
+</pre>
+You can get a float from a string by using the <i>float()</i> function just as the above <i>int()</i> function
+So that's a quick look at integers and floats in Python. Now you should move to the next chapter
+{% endblock %}

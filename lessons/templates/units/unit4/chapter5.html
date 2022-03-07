@@ -1,0 +1,99 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+<h3>Lists</h3>
+A list holds multiple values in a singlw ariable. Each item or element in a list has a unique id. The first element has the id of 0 and then the number increases for upcoming elements. A list can hold any type of objects, from numbers to objects. Also you can have a list with items of many datatypes. So let's define a list
+<pre class="code-area">
+fruits = ["Apple", "Mango", "Orange", "Pineapple", "Guava"] # Defined list
+</pre>
+You use the square brackets to tell its items. All the items in a list are seperated by a comma
+In order to print the list, you can do
+<pre class="code-area">
+print(frunits)
+
+# Result
+['Apple', 'Mango', 'Orange', 'Pineapple', 'Guava']
+</pre>
+To access a particular element, you can do the tell its index within square brackets
+<pre class="code-area">
+print(frunits[0])
+
+# Result
+Apple
+</pre>
+So as you can see from the above example, we printed the first element by asking out list to give the 0th element which is the first element. To get the next element, you put 1 in the square brackets instead of a 0.
+
+To get the last element in the list, you use -1 instead
+<pre class="code-area">
+print(fruits[-1])
+
+# Result
+Guava
+</pre>
+
+Now let's see how you can get a specific range of elements. we will start with a new list here since its a new topic
+<pre class="code-area">
+nums = [1, 2, 3, 4, 5] 		# Define a list of numbers
+</pre>
+In order to get the first 3 items from the list, enter the range within square brackets, seperated by a colon
+<pre class="code-area">
+print(nums[0:3]) 	# Prints 3 numbers starting from 0th element
+print(nums[:3]) 	# Same as the above statement
+print(nums[3:]) 	# Prints all numbers starting from 4th element to the last element
+print(nums[3:-1]) 	# Prints all numbers between the 4th element and the 2nd
+			last element but not the very last element
+print(nums[2:4]) 	# Prints all numbers between 3rd and 4th element
+</pre>
+They will make the following results
+<pre class="code-area">
+[1, 2, 3]
+[1, 2, 3]
+[4, 5]
+[4]
+[2, 4]
+</pre>
+If you pass equal values, 1st value greater than the 2nd, 2nd negative value greater than the 1st positive value on sides of the colon, it will print an empty string. All the above things that we perform are called list slicing
+
+Now let's talk a little more about lists <br>
+You can reassign an item of a list by using the same syntax that we use to define a variable
+
+<pre class="code-area">
+nums[0] = 6 	# Changed the 1st element i. e. 1 to 5
+print(nums)
+
+# Result
+[6, 2, 3, 4, 5]
+</pre>
+
+As you know that a list can have many datatypes in itself, for example
+<pre class="codea-area">
+multi_data_list = ["Hello", 1, 3.14,]
+</pre>
+
+You can have a list within a list
+<pre class="code-area">
+multi_list = [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]]
+</pre>
+This is called a multi-dimensional array, specifically the above is a two dimensional array but you can have a list of three-dimensions or more <br>
+In order to access the first element of the secound list, you can put two square brackets
+<pre class="code-area">
+print(multi_list[1][0]) 	# Secound list so 1, first element so 0
+</pre>
+Note that you can take it as a tree, where there is a main trunk and it can have branches and these branches have other branches. So to get to the 1st branch of the 2nd branch which is joined to the trunk, you first get to the 2nd branch and then its 1st branch <br>
+You can create a list by using the <i>list()</i> function. It takes an arbitary number of arguments and reeturns a list
+<pre class="code-area">
+fruits = list("Apple", "Mango", "Orange", "Pineapple", "Guava")
+</pre>
+
+<h3>Tuples</h3>
+A tuple is similar to a list except it is and immutable data type that is, you cannot reassign its values. Doing so will raise an error, to define a tuple, you use parantheses instead of square brackets
+<pre class="code-area">
+fruits = ("Apple", "Mango", "Orange", "Pineapple", "Guava") # Defined tuple
+</pre>
+Note you can do all the other things that we performed in list except for reassignment. Also slicing uses square brackets whether its list or tuples.
+
+You can create a tuple by using the <i>tuple()</i> function to create a tuple. It takes an arbitary number of arguments to and returns a tuple
+<pre class="code-area">
+fruits = tuple("Apple", "Mango", "Orange", "Pineapple", "Guava")
+</pre>
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Variable scope refers to the order in which Python looks for objects, or basically the lookup order for variables, objects etc. It is one of the most important concepts to remember in Python especially when you start working with functions and function variables. Python follows the LEGB order which stand for
+<ul>
+	<li><b>Local: </b>The local scope for the function which means the variables defined whithin the function. This is the first place where Python looks for variables</li>
+	<li><b>Enclosed: This refers ti variables whithin a function that has aother function inside it</b></li>
+	<li><b>Global: </b>Variables defined in the global scope or at the root of program. Can only be accessed but not changed whithin a function unless explicitly said</li>
+	<li><b>Built-ins: </b>Refer to variables built into Python</li>
+</ul>
+Let's understand this by example
+<pre class="code-area">
+x = 5 			# Global variable
+def func():
+	print(x) 	# Value of global variable can be accessed
+
+def func2():
+	x = 6 		# New variable x is defined and not reassigned
+	print(x)
+
+def func3():
+	x += 1 		# Variables can only be accessed, this causes an error
+	print(x)
+
+func()
+func2()
+func3()
+print(x)
+
+# Result
+5
+6
+UnboundLocalError: local variable 'x' referenced before assignment
+5
+</pre>
+In order to solve the problem caused in func3(), we need to say Python that we want to alter the value of global x variable, in order to do so we use the <i>global</i> statement
+<pre class="code-area">
+x = 5
+
+def func3():
+	global x
+	x += 1 		# Variables can only be accessed, this causes an error
+	print(x)
+</pre>
+func3()
+print(x)
+
+# Result
+6
+6
+So that's variable scope in Python, its a confusing topic and if you still have doubts you can ask them in the query section. Now you should move on to the next chapter
+{% endblock %}

@@ -1,0 +1,131 @@
+#main {
+    margin-left: 5%;
+}
+
+#main h1 {
+    font-size: 250%;
+}
+#main p {
+    font-size: 130%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#main .challenge-button {
+    border: none;
+    border-radius: 25px;
+    font-size: 120%;
+    height: 2em;
+    display: inline-block;
+    width: 10%;
+    color: rgb(255,255,255);
+    font-weight: bold;
+}
+
+#main #answer {
+    background: rgb(0,135,215);
+    position: absolute;
+    right: 2%;
+}
+
+#main #login {
+    background: rgb(0,135,215);
+    position: absolute;
+    right: 2%;
+    width: 17%;
+    font-size: 100%;
+}
+
+#main .challenge-button a {
+    color: rgb(255,255,255);
+    text-decoration: none;
+    font-size: 120%;
+    font-weight: bold;
+}
+
+#main #correct {
+    color: rgb(0,135,215);
+}
+
+#main #incorrect {
+    color: rgb(215,0,0);
+}
+
+#main form #actions {
+    display: flex;
+    width: 95%;
+    justify-content: flex-end;
+    margin-bottom: 2%;
+}
+
+#main #submit {
+    display: none;
+    margin-top: 1%;
+    background: rgb(0,135,215);
+}
+#main #cancel {
+    display: none;
+    margin-top: 1%;
+    margin-left: 1%;
+    background: rgb(255,0,0);
+}
+#main #cancel a{
+    color: rgb(255,255,255);
+    font-weight: bold;
+    text-decoration: none;
+}
+#main textarea {
+    tab-size: 4;
+    -moz-tab-size: 4;
+    display: none;
+    border: none;
+    background: rgb(50,50,50);
+    color: rgb(200,200,200);
+    font-size: 140%;
+    font-style: italic;
+    width: 95%;
+    height: 22em;
+    outline: none;
+}
+
+#main textarea:focus {
+    border-bottom: 1px solid rgb(0,135,215);
+}
+
+.code-area {
+    line-height: 150%;
+    tab-size: 4;
+    width: 95%;
+    -moz-tab-size: 4;
+    background: rgb(40,40,40);
+    font-style: italic;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 760px) {
+    #main #login {
+        width: 60%;
+    }
+    #main #answer {
+        width: 40%;
+        margin-left: 55%;
+    }
+    #main form #actions {
+        margin-top: 2%;
+    }
+
+    #main #submit {
+        width: 40%;
+        margin-right: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #main #cancel {
+        width: 40%;
+        margin-right: 4%;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}

@@ -1,0 +1,24 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Python has the ability to open files, reading files, writing files and appending files. In order to do anything with a file, we need to first open the file, also after all the operations you must close the file. Let's first see how to open a file. In order to open a file you use the <i>open()</i> function which takes a string of filename and a string of the mode in which it will open it as its argument. The mode tells for what purpose the file is being open, is it for reading, writing or appending. Let's first open a simple text file and then we will look at more complex file types. Please note that we will be using a test file called <i>test.txt</i> which has the following lines. Also we will open the file for reading so we will set the mode to be <i>r</i>
+<pre class="code-area">
+This is a test file to be opened in Python
+</pre>
+<pre class="code-area">
+f = open("test.txt", "r")
+</pre>
+So we opened the file with the reading mode by saying the <i>r</i> as the secound argument. But if you run this, you will not see anything since you just opened the file but never asked to read it, in order to read the contents of the file you can run the <i>.read()</i> function over the file. Let's print the contents of the file
+<pre class="code-area">
+print(f.read())
+
+# Result
+This is a test file to be opened in Python
+</pre>
+<b>Note you should never run the <i>.read()</i> more than once because after first run the file gets lost from the memory and you need to rerun the <i>open()</i> function </b> <br>
+Now let's see how to close a file, in order to close a file, just run the <i>.close()</i> function over the file. This will basically handle all the teardown of the file
+<pre class="code-area">
+f.close()
+</pre>
+So that's a look at opening, reading and closing files using Python, in the upcoming chapter you will learn about writing and appending files
+{% endblock chapter %}

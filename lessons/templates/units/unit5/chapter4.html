@@ -1,0 +1,22 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+In order to join two checks in one if statement we use the <i>elif</i> command. In that case Python first checks the <i>if</i> case then if moves to the elif cases and finally if none of the cases comes true ift executes the commands in the else block if its present
+<pre class="code-area">
+fruit = "Apple"
+
+if fruit == "Orange":
+	print("Its an Orange")
+elif fruit == "Apple":
+	print("Its an Apple")
+elif fruit == "Banana":
+	print("Its a Banana")
+else:
+	print("Can't recognize it")
+
+# Result
+Its an Apple
+</pre>
+Now you may ask what is the difference between an <i>elif</i> and an <i>or</i>. So a <i>or</i> operator combines two or more than two condition and if any of them comes true then a code is executed. The thing with <i>elif</i> is that it is actually another if statement joined by an else statement hence elif or else if. Also it allows different code to be executed if different condition comes true <br>
+So that's a look at if else and elif but now a problem occurs that is how to execute a statement multiple times, for that we use loops which will be discussed in the next chapter
+{% endblock %}

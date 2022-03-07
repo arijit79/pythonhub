@@ -1,0 +1,116 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+Python has mainly 6 mathematical operators. They are as follow:-
+<ol>
+	<li>Addition(+)</li>
+	<li>Subtraction(-)</li>
+	<li>Multiplication(*)</li>
+	<li>Division(/)</li>
+	<li>Exponential(**)</li>
+	<li>Modullo(%)</li>
+</ol>
+Let's perform some calculations on these operators:-<br>
+<b>Addition</b>
+<pre class="code-area">
+x = 5
+y = 6
+result = x + y
+print(result)
+</pre>
+So we defined two variables x and y to 5 and 6 respectively. Then we added both of them and saved their value in a result variable. At last we printed the value of result out
+<pre class="code-area">
+11
+</pre>
+<b>Subtraction</b>
+<pre class="code-area">
+x = 5
+y = 6
+result = y - x
+print(result)
+</pre>
+So we agian defined two variables x and y to 5 and 6 respectively. Then we subtracted x from y and saved their value in a result variable. At last we printed the value of result out
+<pre class="code-area">
+1
+</pre>
+<b>Multiplication</b>
+<pre class="code-area">
+x = 5
+y = 6
+result = x * y
+print(result)
+</pre>
+So we again defined two variables x and y to 5 and 6 respectively. Then multiplied both of them and saved their value in a result variable. At last we printed the value of result out
+<pre class="code-area">
+30
+</pre>
+<b>Division</b>
+<pre class="code-area">
+x = 5
+y = 6
+result = y / x
+print(result)
+</pre>
+So we again defined two variables x and y to 5 and 6 respectively. Then we devided y by x and saved their value in a result variable. At last we printed the value of result out
+<pre class="code-area">
+1.2
+</pre>
+Please note that if you want to get only the integer form of the result, use two slashes in the division statement <i>result = x // y</i> <br>
+<b>Exponential</b>
+<pre class="code-area">
+x = 4
+y = 2
+result = x ** y
+print(result)
+</pre>
+So we again defined two variables x and y to 5 and 6 respectively. Then put the value of y to the power of value of x which is same as saying x <sup>y</sup> and saved their value in a result variable. At last we printed the value of result out
+<pre class="code-area">
+16
+</pre>
+Python follows the BEDMAS rule which stands as <br>
+Bracket<br>
+Exponential<br>
+Division<br>
+Multiplication<br>
+Addition<br>
+Subtraction<br>
+
+For example let's write a simple equation
+<pre class="code-area">
+r = 5 * 10 / 2 + 5 - 20
+print(r)
+</pre>
+This would make the following result
+<pre class="code-area">
+10.0
+</pre>
+Please note that it returned a decimal since we have done some division. Now let's change the order by puttig some parantheses
+<pre class="code-area">
+r = 5 * 10 / (2 + 5) - 20
+print(r)
+</pre>
+This would make the following result
+<pre class="code-area">
+-12.857142857142858
+</pre>
+So that's a look at Python's main mathematical operators <br>
+<h3>Increment and Decrement</h3> <br>
+Let;s see how you can increment and decrement a variable's value
+<pre class="code-area">
+z = 5
+z = z + 1 		# Increment line
+print(z)
+
+# Result
+6
+</pre>
+But that's a longer way. A much shorter way is by using += together
+<pre class="code-area">
+z += 1
+print(z)
+
+# Result
+6
+</pre>
+So that's a much shorter way. You can do decrement, multiplication and division in the same way by using their symbols and an equal sign. It expands to the above in the Increment Line from the first example. Now you should move on to the next chapter
+{% endblock %}

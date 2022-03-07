@@ -1,0 +1,61 @@
+{% extends "base_chapter.html" %}
+
+{% block chapter %}
+A dictionary holds a key value pair of objects, joust like JSON. We define a dictionary by using curly brackets, also each key and value is seperated by a colon and each key value pair is seperated by a comma. Let's define a dictionary
+<pre class="code-area">
+langs = {
+	"Python": "Interpreted",
+	"Java": "Compiled",
+	"C": "Compiled",
+	"C++": "Compiled",
+	"Ruby": "Interpreted"
+}
+</pre>
+Sp we defined a dictionary of programming languages. So each language has a certain category whether it is compiled or intepreted. Now let's see how to get the value of a key <br>
+To get the category of Java, you can use the print statement with the dictionary and the key in square brackets
+<pre class="code-area">
+print(langs["Java"])
+
+# Result
+Compiled
+</pre>
+So it printed compiled on the screen. But check what would happen if you ask for a key that does not exist
+
+<pre class="code-area">
+print(langs["R"])
+
+# Result
+KeyError: 'f'
+</pre>
+So that gave an error. Please note that we have just showed the last line of error since the other information in an error is not required. <br>
+In order to say Python to not through an error when a key does not exist, you should use the <i>.get()</i> function on the list
+<pre class="code-area">
+print(lang.get("R"))
+
+# Result
+None
+</pre>
+This returned a None object and not an error. <br>
+Now let's talk about a few important points on dictionaries <br>
+A dictionary can hold many data type objects whithin it just like a list <br>
+You can have a dictionary whithin a dictionary, just like lists. The syntax is shown below
+<pre class="code-area">
+people = {
+	"john": {"name": "John", "age": 30},
+	"Andrew": {"name": "Andrew", "age": 20}
+}
+</pre>
+You can access its elements by using more square brackets
+<pre class="code-area">
+print(people["john"]["age"])
+
+# Result
+30
+</pre>
+You can use the <i>dict()</i> function to make a list, it takes an arbitary number of keyword arguments to make a dictionary
+<pre class="code-area">
+langs = dict(Python="Interpreted", "Java": "Compiled", C="Compiled")
+</pre>
+Please do note that it is a bad way to define dictionaries when you code since it does not allow you to define keys such as C++
+Also multi-dimensional dictionaries make the decreases the readibity of the code
+{% endblock %}
